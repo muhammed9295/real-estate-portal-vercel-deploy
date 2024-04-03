@@ -43,7 +43,7 @@ function page() {
     const fetchProperties = async () => {
 
       const response = await axios.get(
-        `http://localhost:8000/api/properties/get-search-properties?listingType=${listingType}&city=${city}&neighbourhood=${neighbourhood}&minPrice=${minPrice}&maxPrice=${maxPrice}`
+        `https://real-estate-portal.onrender.com/api/properties/get-search-properties?listingType=${listingType}&city=${city}&neighbourhood=${neighbourhood}&minPrice=${minPrice}&maxPrice=${maxPrice}`
       );
 
       setProperties(response.data.data);

@@ -85,7 +85,7 @@ function page() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/properties/add-properties",
+        "https://real-estate-portal.onrender.com/api/properties/add-properties",
         formDataToSend,
         {
           headers: {

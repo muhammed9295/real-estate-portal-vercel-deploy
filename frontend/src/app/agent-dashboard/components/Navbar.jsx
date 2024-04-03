@@ -24,7 +24,7 @@ function Navbar() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/agents/logout-agent",
+        "https://real-estate-portal.onrender.com/api/agents/logout-agent",
         {},
         { withCredentials: true }
       );

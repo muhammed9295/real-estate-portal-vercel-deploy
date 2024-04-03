@@ -35,7 +35,7 @@ function AllProperties() {
   useEffect(() => {
     const fetchProperties = async () => {
       const response = await axios.get(
-        "http://localhost:8000/api/properties/get-properties"
+        "https://real-estate-portal.onrender.com/api/properties/get-properties"
       );
 
       setProperties(response.data.data);

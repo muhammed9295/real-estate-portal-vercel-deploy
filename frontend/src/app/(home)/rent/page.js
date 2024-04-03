@@ -29,81 +29,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 
-const properties = [
-  {
-    id: 1,
-    title: "Journeys Coral Gables",
-    address: "3119 Twin Lakes Road, Montgomer",
-    bed: 5,
-    bath: 3,
-    area: 752,
-    img: "/property/property-1.png",
-  },
-  {
-    id: 2,
-    title: "Journeys Coral Gables",
-    address: "3119 Twin Lakes Road, Montgomer",
-    bed: 5,
-    bath: 3,
-    area: 752,
-    img: "/property/property-2.png",
-  },
-  {
-    id: 3,
-    title: "Journeys Coral Gables",
-    address: "3119 Twin Lakes Road, Montgomer",
-    bed: 5,
-    bath: 3,
-    area: 752,
-    img: "/property/property-3.png",
-  },
-  {
-    id: 4,
-    title: "Journeys Coral Gables",
-    address: "3119 Twin Lakes Road, Montgomer",
-    bed: 5,
-    bath: 3,
-    area: 752,
-    img: "/property/property-1.png",
-  },
-  {
-    id: 5,
-    title: "Journeys Coral Gables",
-    address: "3119 Twin Lakes Road, Montgomer",
-    bed: 5,
-    bath: 3,
-    area: 752,
-    img: "/property/property-3.png",
-  },
-  {
-    id: 6,
-    title: "Journeys Coral Gables",
-    address: "3119 Twin Lakes Road, Montgomer",
-    bed: 5,
-    bath: 3,
-    area: 752,
-    img: "/property/property-1.png",
-  },
-  {
-    id: 7,
-    title: "Journeys Coral Gables",
-    address: "3119 Twin Lakes Road, Montgomer",
-    bed: 5,
-    bath: 3,
-    area: 752,
-    img: "/property/property-2.png",
-  },
-  {
-    id: 8,
-    title: "Journeys Coral Gables",
-    address: "3119 Twin Lakes Road, Montgomer",
-    bed: 5,
-    bath: 3,
-    area: 752,
-    img: "/property/property-3.png",
-  },
-];
-
 function page() {
   const [rentProperties, setRentProperties] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -112,7 +37,7 @@ function page() {
     setLoading(true);
     const fetchRentProperties = async () => {
       const response = await axios.get(
-        "http://localhost:8000/api/properties/get-rent-properties"
+        "https://real-estate-portal.onrender.com/api/properties/get-rent-properties"
       );
       setLoading(false);
       setRentProperties(response.data.data);

@@ -25,7 +25,7 @@ function page() {
   useEffect(() => {
     const fetchUserData = async () => {
       const response = await axios.get(
-        "http://localhost:8000/api/users/current-user",
+        "https://real-estate-portal.onrender.com/api/users/current-user",
         { withCredentials: true }
       );
       setUser(response.data.data);
@@ -57,7 +57,7 @@ function page() {
     });
 
     try {
-      const response = await axios.patch("http://localhost:8000/api/users/update-profile", userDataToSend, {
+      const response = await axios.patch("https://real-estate-portal.onrender.com/api/users/update-profile", userDataToSend, {
         headers: { "Content-Type": "multipart/form-data" },
         withCredentials: true,
       });

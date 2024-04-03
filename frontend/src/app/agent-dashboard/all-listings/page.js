@@ -26,7 +26,7 @@ function page() {
     const fetchProperties = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/properties/get-agentProperties",
+          "https://real-estate-portal.onrender.com/api/properties/get-agentProperties",
           { withCredentials: true }
         );
         setProperties(response.data.data);
@@ -42,7 +42,7 @@ function page() {
   const deleteProperty = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:8000/api/properties/delete-singleProperty/${id}`,
+        `https://real-estate-portal.onrender.com/api/properties/delete-singleProperty/${id}`,
         { withCredentials: true }
       );
       const updatedProperties = properties.filter(

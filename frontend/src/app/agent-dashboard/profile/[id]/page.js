@@ -26,7 +26,7 @@ function page() {
   useEffect(() => {
     const fetchAgentData = async () => {
       const response = await axios.get(
-        "http://localhost:8000/api/agents/get-agent",
+        "https://real-estate-portal.onrender.com/api/agents/get-agent",
         { withCredentials: true }
       );
       setAgent(response.data.data);
@@ -58,7 +58,7 @@ function page() {
 
     try {
       const response = await axios.patch(
-        "http://localhost:8000/api/agents/update-agent",
+        "https://real-estate-portal.onrender.com/api/agents/update-agent",
         agentDataToSend,
         {
           headers: { "Content-Type": "multipart/form-data" },

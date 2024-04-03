@@ -34,7 +34,7 @@ function page({ params }) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/properties/get-singleProperty/${id}`
+          `https://real-estate-portal.onrender.com/api/properties/get-singleProperty/${id}`
         );
         setProperty(response.data.data[0]);
         setAgentDetails(response.data.data[0].agent_details);
@@ -51,7 +51,7 @@ function page({ params }) {
   const addWishlist = async () => {
     try {
       const response = await axios.patch(
-        `http://localhost:8000/api/users/add-wishlist/${id}`,
+        `https://real-estate-portal.onrender.com/api/users/add-wishlist/${id}`,
         {},
         {
           withCredentials: true,

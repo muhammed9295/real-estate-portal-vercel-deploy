@@ -47,7 +47,7 @@ function page() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/users/register",
+        "https://real-estate-portal.onrender.com/api/users/register",
         userData,
         {
           headers: {

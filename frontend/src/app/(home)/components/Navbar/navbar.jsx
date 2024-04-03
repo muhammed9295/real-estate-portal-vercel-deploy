@@ -37,7 +37,7 @@ function Navbar() {
         setIsLoggedIn(true)
       
 
-      const response = await axios.get("http://localhost:8000/api/users/current-user", {withCredentials:true})
+      const response = await axios.get("https://real-estate-portal.onrender.com/api/users/current-user", {withCredentials:true})
       setIcon(response.data.data)
 
       const fName = response.data.data.firstName
@@ -56,7 +56,7 @@ function Navbar() {
   const handleLogout = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/users/logout",
+        "https://real-estate-portal.onrender.com/api/users/logout",
         {},
         { withCredentials: true }
       );

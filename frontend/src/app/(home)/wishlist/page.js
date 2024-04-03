@@ -36,7 +36,7 @@ function page() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "http://localhost:8000/api/users/get-wishlist",
+        "https://real-estate-portal.onrender.com/api/users/get-wishlist",
         { withCredentials: true }
       );
       setUserDetail(response.data.data[0]);

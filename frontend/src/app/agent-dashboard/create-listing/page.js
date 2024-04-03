@@ -15,6 +15,7 @@ import axios from "axios";
 import { Toaster, toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { baseUrl } from "@/url";
 
 function CreateListing() {
   const [images, setImages] = useState([]);
@@ -85,7 +86,7 @@ function CreateListing() {
 
     try {
       const response = await axios.post(
-        "https://real-estate-portal.onrender.com/api/properties/add-properties",
+        `${baseUrl}/api/properties/add-properties`,
         formDataToSend,
         {
           headers: {

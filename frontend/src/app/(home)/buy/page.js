@@ -27,6 +27,7 @@ import TopSearches from "../components/TopSearches";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import { baseUrl } from "@/url";
 
 function Buy() {
   const [buyProperties, setBuyProperties] = useState([]);
@@ -36,7 +37,7 @@ function Buy() {
     setLoading(true);
     const fetchBuyProperties = async () => {
       const response = await axios.get(
-        "https://real-estate-portal.onrender.com/api/properties/get-buy-properties"
+        `${baseUrl}/api/properties/get-buy-properties`
       );
 
       setBuyProperties(response.data.data);

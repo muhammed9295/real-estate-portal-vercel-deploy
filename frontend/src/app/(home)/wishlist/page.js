@@ -28,6 +28,7 @@ import { MdLocationPin, MdKingBed } from "react-icons/md";
 import { FaShower } from "react-icons/fa";
 import axios from "axios";
 import Link from "next/link";
+import { baseUrl } from "@/url";
 
 function Wishlist() {
   const [userDetail, setUserDetail] = useState([]);
@@ -36,7 +37,7 @@ function Wishlist() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://real-estate-portal.onrender.com/api/users/get-wishlist",
+        `${baseUrl}/api/users/get-wishlist`,
         { withCredentials: true }
       );
       setUserDetail(response.data.data[0]);

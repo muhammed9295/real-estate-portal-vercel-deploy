@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
+import { baseUrl } from "@/url";
 
 function AgentLogin() {
   const [email, setEmail] = useState("");
@@ -19,7 +20,7 @@ function AgentLogin() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://real-estate-portal.onrender.com/api/agents/login-agent",
+        `${baseUrl}/api/agents/login-agent`,
         { email, password },
         {
           headers: { "Content-Type": "application/json" },

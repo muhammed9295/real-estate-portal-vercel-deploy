@@ -28,6 +28,7 @@ import RecommendedSearches from "../components/RecommendedSearches";
 import TopSearches from "../components/TopSearches";
 import axios from "axios";
 import Link from "next/link";
+import { baseUrl } from "@/url";
 
 function AllProperties() {
   const [properties, setProperties] = useState([]);
@@ -35,7 +36,7 @@ function AllProperties() {
   useEffect(() => {
     const fetchProperties = async () => {
       const response = await axios.get(
-        "https://real-estate-portal.onrender.com/api/properties/get-properties"
+        `${baseUrl}/api/properties/get-properties`
       );
 
       setProperties(response.data.data);

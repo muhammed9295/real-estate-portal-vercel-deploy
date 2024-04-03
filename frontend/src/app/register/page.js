@@ -8,6 +8,7 @@ import { Loader2 } from "lucide-react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { baseUrl } from "@/url";
 
 function Register() {
   const [firstName, setFirstName] = useState("");
@@ -47,7 +48,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "https://real-estate-portal.onrender.com/api/users/register",
+        `${baseUrl}/api/users/register`,
         userData,
         {
           headers: {

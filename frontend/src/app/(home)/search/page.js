@@ -29,6 +29,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { baseUrl } from "@/url";
 
 function Search() {
   const [properties, setProperties] = useState([]);
@@ -43,7 +44,7 @@ function Search() {
     const fetchProperties = async () => {
 
       const response = await axios.get(
-        `https://real-estate-portal.onrender.com/api/properties/get-search-properties?listingType=${listingType}&city=${city}&neighbourhood=${neighbourhood}&minPrice=${minPrice}&maxPrice=${maxPrice}`
+        `${baseUrl}/api/properties/get-search-properties?listingType=${listingType}&city=${city}&neighbourhood=${neighbourhood}&minPrice=${minPrice}&maxPrice=${maxPrice}`
       );
 
       setProperties(response.data.data);

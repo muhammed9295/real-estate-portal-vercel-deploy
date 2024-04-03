@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast, Toaster } from "sonner";
 import Link from "next/link";
+import { baseUrl } from "@/url";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://real-estate-portal.onrender.com/api/users/login",
+        `${baseUrl}/api/users/login`,
         { email, password },
         {
           headers: { "Content-Type": "application/json" },

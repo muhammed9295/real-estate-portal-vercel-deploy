@@ -20,6 +20,7 @@ import {
 import { BiLogOutCircle } from "react-icons/bi";
 import axios from "axios";
 import { toast, Toaster } from "sonner";
+import { baseUrl } from "@/url";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -37,7 +38,7 @@ function Navbar() {
         setIsLoggedIn(true)
       
 
-      const response = await axios.get("https://real-estate-portal.onrender.com/api/users/current-user", {withCredentials:true})
+      const response = await axios.get(`${baseUrl}/api/users/current-user`, {withCredentials:true})
       setIcon(response.data.data)
 
       const fName = response.data.data.firstName
@@ -56,7 +57,7 @@ function Navbar() {
   const handleLogout = async () => {
     try {
       const response = await axios.post(
-        "https://real-estate-portal.onrender.com/api/users/logout",
+        `${baseUrl}/api/users/logout`,
         {},
         { withCredentials: true }
       );

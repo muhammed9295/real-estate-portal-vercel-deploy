@@ -20,6 +20,7 @@ import axios from "axios";
 import useEmblaCarousel from "embla-carousel-react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Toaster, toast } from "sonner";
+import { baseUrl } from "@/url";
 
 function SingleRentPage({ params }) {
   const [property, setProperty] = useState("");
@@ -34,7 +35,7 @@ function SingleRentPage({ params }) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://real-estate-portal.onrender.com/api/properties/get-singleProperty/${id}`
+          `${baseUrl}/api/properties/get-singleProperty/${id}`
         );
         setProperty(response.data.data[0]);
         setAgentDetails(response.data.data[0].agent_details);

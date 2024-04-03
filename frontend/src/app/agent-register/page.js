@@ -9,6 +9,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { baseUrl } from "@/url";
 
 function AgentRegister() {
   const [firstName, setFirstName] = useState("");
@@ -48,7 +49,7 @@ function AgentRegister() {
 
     try {
       const response = await axios.post(
-        "https://real-estate-portal.onrender.com/api/agents/register-agent",
+        `${baseUrl}/api/agents/register-agent`,
         userData,
         {
           headers: {

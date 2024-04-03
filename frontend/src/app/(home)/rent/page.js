@@ -28,6 +28,7 @@ import TopSearches from "../components/TopSearches";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import { baseUrl } from "@/url";
 
 function Rent() {
   const [rentProperties, setRentProperties] = useState([]);
@@ -37,7 +38,7 @@ function Rent() {
     setLoading(true);
     const fetchRentProperties = async () => {
       const response = await axios.get(
-        "https://real-estate-portal.onrender.com/api/properties/get-rent-properties"
+        `${baseUrl}/api/properties/get-rent-properties`
       );
       setLoading(false);
       setRentProperties(response.data.data);

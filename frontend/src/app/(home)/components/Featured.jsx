@@ -16,6 +16,7 @@ import { FaShower, FaExpandArrowsAlt } from "react-icons/fa";
 import Image from "next/image";
 import axios from "axios";
 import Link from "next/link";
+import { baseUrl } from "@/url";
 
 function Featured() {
   const [properties, setProperties] = useState([]);
@@ -23,7 +24,7 @@ function Featured() {
   useEffect(() => {
     const fetchProperties = async () => {
       const response = await axios.get(
-        "https://real-estate-portal.onrender.com/api/properties/get-properties"
+        `${baseUrl}/api/properties/get-properties`
       );
 
       setProperties(response.data.data);

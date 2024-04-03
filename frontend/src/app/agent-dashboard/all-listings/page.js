@@ -15,6 +15,7 @@ import {
 import axios from "axios";
 import { MdDelete } from "react-icons/md";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { baseUrl } from "@/url";
 
 function AllListings() {
   const [properties, setProperties] = useState([]);
@@ -26,7 +27,7 @@ function AllListings() {
     const fetchProperties = async () => {
       try {
         const response = await axios.get(
-          "https://real-estate-portal.onrender.com/api/properties/get-agentProperties",
+          `${baseUrl}/api/properties/get-agentProperties`,
           { withCredentials: true }
         );
         setProperties(response.data.data);
@@ -42,7 +43,7 @@ function AllListings() {
   const deleteProperty = async (id) => {
     try {
       await axios.delete(
-        `https://real-estate-portal.onrender.com/api/properties/delete-singleProperty/${id}`,
+        `${baseUrl}/api/properties/delete-singleProperty/${id}`,
         { withCredentials: true }
       );
       const updatedProperties = properties.filter(

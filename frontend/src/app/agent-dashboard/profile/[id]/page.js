@@ -8,6 +8,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { Toaster, toast } from "sonner";
 import { Loader2 } from "lucide-react";
+import { baseUrl } from "@/url";
 
 function Profile() {
   const [loading, setLoading] = useState(false);
@@ -26,7 +27,7 @@ function Profile() {
   useEffect(() => {
     const fetchAgentData = async () => {
       const response = await axios.get(
-        "https://real-estate-portal.onrender.com/api/agents/get-agent",
+        `${baseUrl}/api/agents/get-agent`,
         { withCredentials: true }
       );
       setAgent(response.data.data);
@@ -58,7 +59,7 @@ function Profile() {
 
     try {
       const response = await axios.patch(
-        "https://real-estate-portal.onrender.com/api/agents/update-agent",
+        `${baseUrl}/api/agents/update-agent`,
         agentDataToSend,
         {
           headers: { "Content-Type": "multipart/form-data" },

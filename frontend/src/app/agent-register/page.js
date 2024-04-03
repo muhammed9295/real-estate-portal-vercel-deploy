@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-function page() {
+function AgentRegister() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -155,4 +155,4 @@ function page() {
   );
 }
 
-export default page;
+export default AgentRegister;

@@ -16,7 +16,7 @@ import axios from "axios";
 import { MdDelete } from "react-icons/md";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-function page() {
+function AllListings() {
   const [properties, setProperties] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
@@ -155,4 +155,4 @@ function page() {
   );
 }
 
-export default page;
+export default AllListings;

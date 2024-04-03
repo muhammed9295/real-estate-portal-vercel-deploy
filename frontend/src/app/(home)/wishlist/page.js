@@ -29,7 +29,7 @@ import { FaShower } from "react-icons/fa";
 import axios from "axios";
 import Link from "next/link";
 
-function page() {
+function Wishlist() {
   const [userDetail, setUserDetail] = useState([]);
   const [wishlist, setWishList] = useState([]);
 
@@ -201,4 +201,4 @@ function page() {
   );
 }
 
-export default page;
+export default Wishlist;

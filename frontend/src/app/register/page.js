@@ -9,7 +9,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-function page() {
+function Register() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -146,4 +146,4 @@ function page() {
   );
 }
 
-export default page;
+export default Register;

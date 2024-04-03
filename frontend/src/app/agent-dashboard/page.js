@@ -1,7 +1,7 @@
 
 
-function page() {
+function AgentHome() {
   return <div>Dashboard Content</div>;
 }
 
-export default page;
+export default AgentHome;

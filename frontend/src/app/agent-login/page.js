@@ -9,7 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
 
-function page() {
+function AgentLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
@@ -107,4 +107,4 @@ function page() {
   );
 }
 
-export default page;
+export default AgentLogin;

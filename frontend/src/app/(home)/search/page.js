@@ -30,7 +30,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
-function page() {
+function Search() {
   const [properties, setProperties] = useState([]);
   const searchParams = useSearchParams();
   const neighbourhood = searchParams.get("neighbourhood") || "";
@@ -164,4 +164,4 @@ function page() {
   );
 }
 
-export default page;
+export default Search;

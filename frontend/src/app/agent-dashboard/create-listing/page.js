@@ -16,7 +16,7 @@ import { Toaster, toast } from "sonner";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-function page() {
+function CreateListing() {
   const [images, setImages] = useState([]);
   const [formData, setFormData] = useState({
     title: "",
@@ -351,4 +351,4 @@ function page() {
   );
 }
 
-export default page;
+export default CreateListing;

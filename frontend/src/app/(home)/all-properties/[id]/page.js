@@ -21,7 +21,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Toaster, toast } from "sonner";
 
-function page({ params }) {
+function SingleProperty({ params }) {
   const [property, setProperty] = useState("");
   const [agentDetails, setAgentDetails] = useState("");
   const [propertyImg, setPropertyImg] = useState([]);
@@ -313,4 +313,4 @@ function page({ params }) {
   );
 }
 
-export default page;
+export default SingleProperty;

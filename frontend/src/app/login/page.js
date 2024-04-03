@@ -8,7 +8,7 @@ import axios from "axios";
 import { toast, Toaster } from "sonner";
 import Link from "next/link";
 
-function page() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
@@ -80,4 +80,4 @@ function page() {
   );
 }
 
-export default page;
+export default Login;

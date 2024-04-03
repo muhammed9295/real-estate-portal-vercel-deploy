@@ -29,7 +29,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 
-function page() {
+function Rent() {
   const [rentProperties, setRentProperties] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -145,4 +145,4 @@ function page() {
   );
 }
 
-export default page;
+export default Rent;

@@ -9,7 +9,7 @@ import { Toaster, toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 
-function page() {
+function ProfilePage() {
   const [user, setUser] = useState("");
   const [loading, setLoading] = useState(false);
   const [userData, setUserData] = useState({
@@ -175,4 +175,4 @@ function page() {
   );
 }
 
-export default page;
+export default ProfilePage;

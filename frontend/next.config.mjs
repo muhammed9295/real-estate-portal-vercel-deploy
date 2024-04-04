@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+ 
     async headers() {
         return [
           {
@@ -14,6 +15,7 @@ const nextConfig = {
           }
         ]
       },
+      
     images: {
         domains: ['res.cloudinary.com'],
      },
@@ -22,7 +24,9 @@ const nextConfig = {
     },
     experimental: {
         missingSuspenseWithCSRBailout: false,
-      }
+      },
+      reactStrictMode: true,
+    distDir: 'dist'
 };
 
 export default nextConfig;

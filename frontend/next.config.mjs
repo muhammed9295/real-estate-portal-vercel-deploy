@@ -25,8 +25,7 @@ const nextConfig = {
     experimental: {
         missingSuspenseWithCSRBailout: false,
       },
-      reactStrictMode: true,
-    distDir: 'dist'
+      
 };
 
 export default nextConfig;

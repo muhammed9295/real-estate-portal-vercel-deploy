@@ -84,7 +84,7 @@ const loginAgent = asyncHandler(async (req, res) => {
 
   const options = {
     httpOnly: true,
-    secure: auto,
+    secure: true,
     sameSite: 'none',
   };
 

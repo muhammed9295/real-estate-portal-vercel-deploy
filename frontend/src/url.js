@@ -1,1 +1,1 @@
-export const baseUrl = `https://real-estate-portal-vercel-deploy.onrender.com`
+export const baseUrl = `https://www.courserapid.com`
